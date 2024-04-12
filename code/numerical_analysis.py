@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import warnings
+
+# Suppress all warnings
+warnings.filterwarnings("ignore")
 
 # Function to visualize distribution
 def visualize_data_distribution(df, column):
