@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from scipy.stats import skew
+import numpy as np
 import warnings
 
 # Suppress all warnings
@@ -13,10 +14,14 @@ def find_missing_values(df):
     missing_percentage = (missing_values / total_rows) * 100
     return missing_values[missing_values > 0], missing_percentage[missing_values > 0]
 
-# Function to calculate skewness
+
 def calculate_skewness(df):
-    skewness = df.apply(skew)
+    skewness = df.apply(lambda x: skew(x.dropna()))
+    nan_columns = skewness[skewness.isna()].index.tolist()
+    if nan_columns:
+        st.warning(f"Skewness calculation ignored NaN values in columns: {', '.join(nan_columns)}")
     return skewness
+
 
 # Function to find duplicate values and its percentage
 def find_duplicate_values(df):
