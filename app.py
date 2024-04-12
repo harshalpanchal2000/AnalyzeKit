@@ -17,17 +17,15 @@ def main():
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
 
-        # Display basic info
-        st.subheader("Basic Analysis")
-        perform_basic_analysis(df)
+        # Create tabs for different analyses
+        analysis_option = st.sidebar.radio("Choose Analysis", ["Basic Analysis", "Categorical Analysis", "Numerical Analysis"])
 
-        # Display categorical analysis
-        st.subheader("Categorical Analysis")
-        perform_categorical_analysis(df)
-
-        # Display numerical analysis
-        st.subheader("Numerical Analysis")
-        perform_numerical_analysis(df)
+        if analysis_option == "Basic Analysis":
+            perform_basic_analysis(df)
+        elif analysis_option == "Categorical Analysis":
+            perform_categorical_analysis(df)
+        elif analysis_option == "Numerical Analysis":
+            perform_numerical_analysis(df)
 
 if __name__ == "__main__":
     main()
