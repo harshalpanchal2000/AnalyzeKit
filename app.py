@@ -13,16 +13,11 @@ warnings.filterwarnings("ignore")
 page_bg_img = """
 <style>
 [data-testid="stSidebarContent"] {
-   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    opacity: 0.6;
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 10px), 
-    repeating-linear-gradient(#fcdc5c55, #fcdc5c);
-    z-index: -1;  /* Set z-index to move the background behind other content */
+   background-color: #ffffff;
+opacity: 0.3;
+background-image: radial-gradient(circle at center center, #ffdc53, #ffffff),
+repeating-radial-gradient(circle at center center, #ffdc53, #ffdc53, 10px, transparent 20px, transparent 10px);
+background-blend-mode: multiply;
 }
 </style>
 """
