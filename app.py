@@ -51,10 +51,10 @@ def main():
             st.markdown("## Numerical Analysis")
             perform_numerical_analysis(df)
 
-    # Link to LinkedIn profile with yellow-colored text
+   # Link to LinkedIn profile with yellow-colored text
     st.markdown(
         """
-        <div style='position: fixed; bottom: 10px; right: 10px;'>
+        <div style='position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);'>
             <p>Built by <a href="https://www.linkedin.com/in/harshal-panchal/" target="_blank" style="color: #fcdc5c;">Harshal Panchal</a></p>
         </div>
         """,
