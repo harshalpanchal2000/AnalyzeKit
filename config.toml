@@ -1,2 +1,5 @@
 [deprecation]
 showPyplotGlobalUse = false
+
+[theme]
+sidebar = { "backgroundColor": " #fcdc5cF", "contrast": 1.2 }
