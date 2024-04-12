@@ -25,3 +25,4 @@ def perform_categorical_analysis(df):
         st.subheader(f"Analysis for {column}:")
         visualize_categorical_distribution(df, column)
         display_value_counts(df, column)
+
