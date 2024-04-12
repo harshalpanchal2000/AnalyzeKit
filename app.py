@@ -18,12 +18,9 @@ def main():
         "Upload your CSV file and choose from different analysis options to gain insights into your data."
     )
 
-    # Subheading
-    st.subheader("Understand Your Data Quickly and Easily")
-
     # File uploader
     st.sidebar.title("Upload Dataset")
-    uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
+    uploaded_file = st.sidebar.file_uploader("", type=["csv"])
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
