@@ -8,13 +8,19 @@ import warnings
 # Suppress all warnings
 warnings.filterwarnings("ignore")
 
-page_bg_img = """
+# Define the path to the background image file
+bg_image_path = "images/bg.png"  # Adjust the path as per your file structure
+
+# Define the CSS style to set the background image
+page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"]{
-background-image:  url(images/bg.png)
-}
+[data-testid="stAppContainer"] {{
+    background-image: url({bg_image_path});
+    background-size: cover;
+}}
 </style>
 """
+
 # Custom Theme
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
