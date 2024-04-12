@@ -25,14 +25,17 @@ def main():
         analysis_option = st.sidebar.radio("Choose Analysis", ["Basic Analysis", "Categorical Analysis", "Numerical Analysis"])
 
         if analysis_option == "Basic Analysis":
+            st.subheader("Basic Analysis")
             perform_basic_analysis(df)
         elif analysis_option == "Categorical Analysis":
+            st.subheader("Categorical Analysis")
             categorical_columns = df.select_dtypes(include=['object', 'category']).columns
             if len(categorical_columns) == 0:
                 st.write("No categorical features found in the dataset.")
             else:
                 perform_categorical_analysis(df)
         elif analysis_option == "Numerical Analysis":
+            st.subheader("Numerical Analysis")
             numerical_columns = df.select_dtypes(include=['int', 'float']).columns
             if len(numerical_columns) == 0:
                 st.write("No numerical features found in the dataset.")
