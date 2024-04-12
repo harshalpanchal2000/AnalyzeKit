@@ -17,7 +17,7 @@ def main():
 
     # File uploader
     st.sidebar.title("Upload Dataset")
-    uploaded_file = st.sidebar.file_uploader(type=["csv"])
+    uploaded_file = st.sidebar.file_uploader("",type=["csv"])
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
