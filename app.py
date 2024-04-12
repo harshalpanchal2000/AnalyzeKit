@@ -12,15 +12,22 @@ def main():
     # Logo image in the main section
     st.image("images/logo.png")
 
-    # Description of the app
-    st.image("images/Description.png")
+    # Additional image below the logo
+    additional_image_path = "images/description.png"
+    if st.sidebar.file_uploader("Upload your CSV file", type=["csv"]) is not None:
+        additional_image = st.image(additional_image_path, width=200)
+    else:
+        additional_image = st.empty()
 
     # File uploader
     st.sidebar.title("Upload Dataset")
-    uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
+    uploaded_file = st.sidebar.file_uploader(type=["csv"])
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
+
+        # Hide additional image once the dataset is uploaded
+        additional_image.empty()
 
         # Create tabs for different analyses
         analysis_option = st.sidebar.radio("Choose Analysis", ["Basic Analysis", "Categorical Analysis", "Numerical Analysis"])
@@ -40,11 +47,11 @@ def main():
             else:
                 perform_numerical_analysis(df)
 
-    # Link to LinkedIn profile
+    # Link to LinkedIn profile with yellow-colored text
     st.markdown(
         """
         <div style='position: fixed; bottom: 10px; right: 10px;'>
-            <p>Built by <a href="https://www.linkedin.com/in/harshal-panchal/" target="_blank">Harshal Panchal</a></p>
+            <p>Built by <a href="https://www.linkedin.com/in/harshal-panchal/" target="_blank" style="color: yellow;">Harshal Panchal</a></p>
         </div>
         """,
         unsafe_allow_html=True
