@@ -51,9 +51,9 @@ def perform_basic_analysis(df):
     st.write(missing_percentage)
 
     # Calculate skewness
-    skewness = calculate_skewness(df)
-    st.write("Skewness:")
-    st.write(skewness)
+    #skewness = calculate_skewness(df)
+    #st.write("Skewness:")
+    #st.write(skewness)
 
     # Find duplicate values
     duplicate_rows, duplicate_percentage = find_duplicate_values(df)
