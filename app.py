@@ -13,7 +13,7 @@ def main():
     st.image("logo.png", width=150)
 
     # Subheading
-    st.subheader("Because Life's Too Short for Mundane Analysis.")
+    #st.subheader("Because Life's Too Short for Mundane Analysis.")
 
      # Description of the app on the sidebar
     st.sidebar.write(
