@@ -5,7 +5,7 @@ from code.numerical_analysis import perform_numerical_analysis
 from code.basic_analysis import perform_basic_analysis
 import warnings
 
-# Ignore all warnings
+# Suppress all warnings
 warnings.filterwarnings("ignore")
 
 def main():
@@ -27,9 +27,17 @@ def main():
         if analysis_option == "Basic Analysis":
             perform_basic_analysis(df)
         elif analysis_option == "Categorical Analysis":
-            perform_categorical_analysis(df)
+            categorical_columns = df.select_dtypes(include=['object', 'category']).columns
+            if len(categorical_columns) == 0:
+                st.write("No categorical features found in the dataset.")
+            else:
+                perform_categorical_analysis(df)
         elif analysis_option == "Numerical Analysis":
-            perform_numerical_analysis(df)
+            numerical_columns = df.select_dtypes(include=['int', 'float']).columns
+            if len(numerical_columns) == 0:
+                st.write("No numerical features found in the dataset.")
+            else:
+                perform_numerical_analysis(df)
 
 if __name__ == "__main__":
     main()
