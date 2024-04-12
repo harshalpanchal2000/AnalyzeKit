@@ -43,7 +43,7 @@ def perform_numerical_analysis(df):
     st.subheader("Numerical Features:")
     st.write(numerical_columns)
     for column in numerical_columns:
-        st.subheader(f"Analysis for {column}:")
+        st.subheader(f"Analysis for Feature named '{column}':")
         st.write("Sample Values:")
         st.write(df[column].sample(min(5, df.shape[0])))
         visualize_data_distribution(df, column)
