@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 
 page_bg_img = """
 <style>
-[data-testid="stSidebarContent"]{
+[data-testid="stAppViewContainer"]{
 background-color: #e5e5f7;
 opacity: 0.6;
 background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), 
