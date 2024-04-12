@@ -2,4 +2,10 @@
 showPyplotGlobalUse = false
 
 [theme]
-sidebar = { "backgroundColor": " #fcdc5cF", "contrast": 1.2 }
+primaryColor = "#0000FF"
+backgroundColor = "#FFFFFF"
+textColor = "#000000"
+
+[theme.sidebar]
+backgroundColor = "#FFFFFF"
+contrast = 1.2
