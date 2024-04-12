@@ -9,17 +9,20 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-st.markdown(
-    """
+page_bg_img = """
 <style>
-.sidebar .sidebar-content {
-    background-image: linear-gradient(#2e7bcf,#2e7bcf);
-    color: white;
+[data-testid="stSidebarContent"] {
+background-color: #ffffff;
+opacity: 0.3;
+background-image: radial-gradient(circle at center center, #ffdc53, #ffffff),
+repeating-radial-gradient(circle at center center, #ffdc53, #ffdc53, 10px, transparent 20px, transparent 10px);
+background-blend-mode: normal;
 }
 </style>
-""",
-    unsafe_allow_html=True,
-)
+"""
+
+# Apply the custom CSS style to set the background image
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 def main():
     # Logo image in the main section
