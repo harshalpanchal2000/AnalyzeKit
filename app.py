@@ -12,6 +12,9 @@ def main():
     # Logo image in the main section
     st.image("images/logo.png")
 
+    [theme]
+    sidebar = { "backgroundColor": "#FFFFFF", "contrast": 1.2 }
+    
     # Additional image below the logo
     st.image("images/Description.png")
 
