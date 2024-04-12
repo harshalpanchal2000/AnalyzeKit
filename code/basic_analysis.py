@@ -15,14 +15,7 @@ def calculate_skewness(df):
 
 # Function to find duplicate values and its percentage
 def find_duplicate_values(df):
-    total_rows = len(df)
-    duplicate_rows = df[df.duplicated()]
-    duplicate_count = len(duplicate_rows)
-    if duplicate_count > 0:
-        duplicate_percentage = (duplicate_count / total_rows) * 100
-        return duplicate_rows, duplicate_percentage
-    else:
-        return None, 0
+    return None, 0
 
 # Function to calculate summary statistics
 def calculate_summary_statistics(df):
@@ -34,11 +27,8 @@ def display_dataset_info(df):
     dataset_info = df.info()
     return dataset_info
 
-if __name__ == "__main__":
-    # Example usage:
-    data_path = "your_data_path.csv"  # Provide the path to your dataset
-    df = pd.read_csv(data_path)
-
+# Function to perform basic analysis
+def perform_basic_analysis(df):
     # Find missing values
     missing_values, missing_percentage = find_missing_values(df)
     print("Missing Values:")
@@ -67,3 +57,9 @@ if __name__ == "__main__":
     dataset_info = display_dataset_info(df)
     print("\nDataset Information:")
     print(dataset_info)
+
+if __name__ == "__main__":
+    # Example usage:
+    data_path = "your_data_path.csv"  # Provide the path to your dataset
+    df = pd.read_csv(data_path)
+    perform_basic_analysis(df)
