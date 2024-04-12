@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 
 def main():
     # Logo image
-    st.image("logo.png", use_column_width=True)
+    st.image("logo.png", width=150)
 
     # Subheading
     st.subheader("Because Life's Too Short for Mundane Analysis.")
