@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 bg_image_path = "https://github.com/harshalpanchal2000/AnalyzeKit/tree/main/images/bg.png"  # Adjust the path as per your file structure
 
 # Define the CSS style to set the background image
-page_bg_img = f"""
+page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
     background-image: url(bg_image_path);
