@@ -13,10 +13,10 @@ page_bg_img = """
 <style>
 [data-testid="stSidebarContent"] {
 background-color: #ffffff;
-opacity: 0.3;
+opacity: 0.6;
 background-image: radial-gradient(circle at center center, #ffdc53, #ffffff),
 repeating-radial-gradient(circle at center center, #ffdc53, #ffdc53, 10px, transparent 20px, transparent 10px);
-background-blend-mode: multiply;
+background-blend-mode: normal;
 }
 </style>
 """
