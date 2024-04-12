@@ -13,7 +13,7 @@ def main():
     st.image("images/logo.png")
 
     # Description of the app
-    st.image("images/Description.png", width =500)
+    st.image("images/Description.png")
 
     # File uploader
     st.sidebar.title("Upload Dataset")
