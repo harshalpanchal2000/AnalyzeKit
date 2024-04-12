@@ -1,43 +1,72 @@
-# AnalyzeKit
+# AnalyseKit: Because Life's Too Short for Mundane Analysis!
 
-AnalyzeKit is a comprehensive Python library designed to streamline and enhance the process of Exploratory Data Analysis (EDA). Whether you're a seasoned data scientist or just starting your journey in data analysis, AnalyzeKit provides the tools and resources you need to extract meaningful insights from your data efficiently and effectively.
+AnalyseKit is a web application designed to provide automated exploratory data analysis (EDA) for CSV datasets. It allows users to quickly understand their dataset by visualizing key insights and statistical summaries.
 
-## Key Features
+## Features
 
-- **Automated Data Profiling**: Gain instant insights into your dataset's structure, statistics, and distributions with automated data profiling capabilities.
-  
-- **Visualizations**: Explore your data dynamically with interactive visualizations, including histograms, scatter plots, and more, to uncover hidden patterns and trends.
-  
-- **Statistical Analysis**: Conduct thorough statistical analysis with ease, including summary statistics, correlation matrices, and skewness detection.
-  
-- **Missing Value Imputation**: Handle missing data seamlessly with intelligent imputation techniques, ensuring data completeness without sacrificing accuracy.
-  
-- **Outlier Detection**: Detect and visualize outliers effortlessly using box plots and other statistical methods, aiding in data quality assessment.
-  
-- **Customizable and Scalable**: Tailor the analysis process to your specific needs with customizable options and support for datasets of varying sizes.
-  
-- **Documentation and Interpretability**: Enhance collaboration and transparency with comprehensive documentation and interpretability features, facilitating knowledge sharing and decision-making.
+- **Upload Dataset**: Easily upload your CSV dataset for analysis.
+- **Basic Analysis**: View basic statistics and summaries for your dataset.
+- **Categorical Analysis**: Explore categorical features with interactive visualizations.
+- **Numerical Analysis**: Analyze numerical features with histograms, scatter plots, and more.
+
+## "Understand Your Data Quickly and Easily"
+
+AnalyseKit helps you gain insights into your dataset quickly and easily, allowing you to make informed decisions based on your data.
 
 ## Installation
 
-You can install AnalyzeKit using pip:
+1. Clone this repository:
+
+    ```bash
+    git clone https://github.com/your_username/analysekit.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd analysekit
+    ```
+
+3. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-```python
-import AnalyzeKit as ak
+1. Run the Streamlit app:
 
-# Load your dataset
-data = ak.load_dataset("your_dataset.csv")
+    ```bash
+    streamlit run app.py
+    ```
 
-# Perform Exploratory Data Analysis
-ak.detailed_eda(data)
-```
+2. Access the app in your web browser:
 
-For more detailed usage instructions and examples, please refer to the documentation.
+    ```
+    http://localhost:8501
+    ```
+
+3. Upload your CSV dataset and choose the desired analysis option from the sidebar.
+
+## Technologies Used
+
+- Python
+- Streamlit
+- Pandas
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- scipy
 
 ## Contributing
-Contributions are welcome! If you'd like to contribute to AnalyzeKit, please fork the repository, create a new branch, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+Contributions are welcome! Feel free to open issues or pull requests for bug fixes, features, or enhancements.
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+- [Harshal Panchal](https://www.linkedin.com/in/harshal-panchal/)
