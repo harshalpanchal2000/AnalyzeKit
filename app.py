@@ -9,8 +9,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def main():
-    # Sidebar image
-    st.sidebar.image("logo.png", caption="AnalyseKit", use_column_width=True)
+    # Logo image
+    st.image("logo.png", caption="AnalyseKit", use_column_width=True)
 
     # Description of the app
     st.write(
