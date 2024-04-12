@@ -9,7 +9,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def main():
-    st.title("AnalyseKit: Automated Exploratory Data Analysis")
+    # Sidebar image
+    st.sidebar.image("logo.png", caption="AnalyseKit", use_column_width=True)
 
     # Description of the app
     st.write(
