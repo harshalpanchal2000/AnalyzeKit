@@ -12,19 +12,17 @@ warnings.filterwarnings("ignore")
 bg_image_path = "images/bg.png"  # Adjust the path as per your file structure
 
 # Define the CSS style to set the background image
-page_bg_img = """
+page_bg_img = f"""
 <style>
-[data-testid="stSidebarContent"] {
-    background-image: url(bg_image_path);
+[data-testid="stSidebarContent"] {{
+    background-image: url({bg_image_path});
     background-size: cover;
-}
+}}
 </style>
 """
 
-# Custom Theme
+# Apply the custom CSS style to set the background image
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
 
 def main():
     # Logo image in the main section
