@@ -10,16 +10,16 @@ warnings.filterwarnings("ignore")
 
 def main():
     # Logo image
-    st.image("logo.png", caption="AnalyseKit", use_column_width=True)
+    st.image("logo.png", use_column_width=True)
 
-    # Description of the app
-    st.write(
+    # Subheading
+    st.subheader("Because Life's Too Short for Mundane Analysis.")
+
+     # Description of the app on the sidebar
+    st.sidebar.write(
         "AnalyseKit is a tool designed to help users quickly and easily understand their dataset through automated exploratory data analysis (EDA). "
         "Upload your CSV file and choose from different analysis options to gain insights into your data."
     )
-
-    # Subheading
-    st.subheader("Understand Your Data Quickly and Easily")
 
     # File uploader
     st.sidebar.title("Upload Dataset")
