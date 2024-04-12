@@ -40,7 +40,6 @@ def main():
             else:
                 perform_numerical_analysis(df)
 
-    st.markdown('<link rel="stylesheet" href="styles.css">', unsafe_allow_html=True)
 
     # Link to LinkedIn profile with yellow-colored text
     st.markdown(
