@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -10,16 +11,17 @@ def visualize_categorical_distribution(df, column):
     plt.xlabel(column)
     plt.ylabel('Count')
     plt.xticks(rotation=45)
-    plt.show()
+    st.pyplot()
 
 # Function to display value counts for categorical variables
 def display_value_counts(df, column):
-    print(f"Value Counts for {column}:")
-    print(df[column].value_counts())
+    st.write(f"Value Counts for {column}:")
+    st.write(df[column].value_counts())
 
 # Function for categorical analysis
 def perform_categorical_analysis(df):
     categorical_columns = df.select_dtypes(include=['object', 'category']).columns
     for column in categorical_columns:
-        print(f"Analysis for {column}:")
+        st.subheader(f"Analysis for {column}:")
         visualize_categorical_distribution(df, column)
+        display_value_counts(df, column)
