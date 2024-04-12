@@ -66,3 +66,35 @@ def perform_basic_analysis(df):
     dataset_info = display_dataset_info(df)
     st.write("Dataset Information:")
     st.write(dataset_info)
+
+# Main function
+def main():
+    st.title("Automated Dataset Analysis")
+    
+    # Load dataset
+    uploaded_file = st.file_uploader("Upload Dataset", type=["csv", "txt"])
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        
+        # Create tabs for each analysis
+        with st.beta_expander("Basic Analysis"):
+            perform_basic_analysis(df)
+        
+        with st.beta_expander("Missing Values Analysis"):
+            find_missing_values(df)
+        
+        with st.beta_expander("Skewness Analysis"):
+            calculate_skewness(df)
+        
+        with st.beta_expander("Duplicate Values Analysis"):
+            find_duplicate_values(df)
+        
+        with st.beta_expander("Summary Statistics Analysis"):
+            calculate_summary_statistics(df)
+        
+        with st.beta_expander("Dataset Information"):
+            display_dataset_info(df)
+
+# Execute the main function
+if __name__ == "__main__":
+    main()
