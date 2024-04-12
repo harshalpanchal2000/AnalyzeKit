@@ -8,13 +8,13 @@ import warnings
 # Suppress all warnings
 warnings.filterwarnings("ignore")
 
-page_bg_img= """
+page_bg_img = """
 <style>
 [data-testid="stSidebarContent"]{
 background-color: #e5e5f7;
 opacity: 0.6;
 background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), 
-repeating-linear-gradient( #fcdc5c55, #fcdc5c );
+repeating-linear-gradient( #fcdc5c55, #fcdc5c )
 }
 </style>
 """
