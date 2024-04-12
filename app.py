@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Define the path to the background image file
-bg_image_path = "https://github.com/harshalpanchal2000/AnalyzeKit/tree/main/images/bg.png"  # Adjust the path as per your file structure
+bg_image_path = "images/bg.png"  # Adjust the path as per your file structure
 
 # Define the CSS style to set the background image
 page_bg_img = """
