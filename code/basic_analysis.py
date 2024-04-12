@@ -30,6 +30,10 @@ def display_dataset_info(df):
 
 # Function to perform basic analysis
 def perform_basic_analysis(df):
+    # Display a sample of the dataset
+    st.write("Sample of Dataset:")
+    st.write(df.head())
+
     # Find missing values
     missing_values, missing_percentage = find_missing_values(df)
     st.write("Missing Values:")
