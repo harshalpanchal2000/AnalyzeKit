@@ -8,16 +8,16 @@ import warnings
 # Suppress all warnings
 warnings.filterwarnings("ignore")
 
-# Define the path to the background image file
-bg_image_path = "images/bg.png"  # Adjust the path as per your file structure
 
 # Define the CSS style to set the background image
-page_bg_img = f"""
+page_bg_img = """
 <style>
-[data-testid="stSidebarContent"] {{
-    background-image: url({bg_image_path});
-    background-size: cover;
-}}
+[data-testid="stSidebarContent"] {
+   background-color: #ffffff;
+opacity: 0.6;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 10px ), 
+repeating-linear-gradient( #fcdc5c55, #fcdc5c );
+}
 </style>
 """
 
