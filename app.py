@@ -11,6 +11,12 @@ warnings.filterwarnings("ignore")
 def main():
     st.title("AnalyseKit: Automated Exploratory Data Analysis")
 
+    # Description of the app
+    st.write(
+        "AnalyseKit is a tool designed to help users quickly and easily understand their dataset through automated exploratory data analysis (EDA). "
+        "Upload your CSV file and choose from different analysis options to gain insights into your data."
+    )
+
     # Subheading
     st.subheader("Understand Your Data Quickly and Easily")
 
@@ -25,22 +31,29 @@ def main():
         analysis_option = st.sidebar.radio("Choose Analysis", ["Basic Analysis", "Categorical Analysis", "Numerical Analysis"])
 
         if analysis_option == "Basic Analysis":
-            st.subheader("Basic Analysis")
             perform_basic_analysis(df)
         elif analysis_option == "Categorical Analysis":
-            st.subheader("Categorical Analysis")
             categorical_columns = df.select_dtypes(include=['object', 'category']).columns
             if len(categorical_columns) == 0:
                 st.write("No categorical features found in the dataset.")
             else:
                 perform_categorical_analysis(df)
         elif analysis_option == "Numerical Analysis":
-            st.subheader("Numerical Analysis")
             numerical_columns = df.select_dtypes(include=['int', 'float']).columns
             if len(numerical_columns) == 0:
                 st.write("No numerical features found in the dataset.")
             else:
                 perform_numerical_analysis(df)
+
+    # Write "Made by Harshal Panchal" in the bottom corner
+    st.markdown(
+        """
+        <div style='position: fixed; bottom: 10px; right: 10px;'>
+            <p>Made by Harshal Panchal</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 if __name__ == "__main__":
     main()
