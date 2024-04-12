@@ -16,7 +16,7 @@ background-color: #ffffff;
 opacity: 0.3;
 background-image: radial-gradient(circle at center center, #ffdc53, #ffffff),
 repeating-radial-gradient(circle at center center, #ffdc53, #ffdc53, 10px, transparent 20px, transparent 10px);
-background-blend-mode: normal;
+background-blend-mode: multiply;
 }
 </style>
 """
