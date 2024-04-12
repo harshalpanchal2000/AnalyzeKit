@@ -3,6 +3,10 @@ import pandas as pd
 from code.categorical_analysis import perform_categorical_analysis
 from code.numerical_analysis import perform_numerical_analysis
 from code.basic_analysis import perform_basic_analysis
+import warnings
+
+# Ignore all warnings
+warnings.filterwarnings("ignore")
 
 def main():
     st.title("AnalyseKit: Automated Exploratory Data Analysis")
