@@ -19,7 +19,7 @@ repeating-linear-gradient( #fcdc5c55, #fcdc5c );
 </style>
 """
 # Custom Theme
-st.markdown("",unsafe_allow_html=True)
+st.markdown("page_bg_img",unsafe_allow_html=True)
 
 
 
