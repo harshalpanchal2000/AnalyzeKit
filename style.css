@@ -1,0 +1,14 @@
+/* Primary color */
+.streamlit-embed-wrapper .element-container {
+    color: #0000FF; /* Blue color */
+}
+
+/* Secondary background color */
+.streamlit-embed-wrapper .stApp {
+    background-color: #F0F0F0; /* Light gray color */
+}
+
+/* Text color */
+.streamlit-embed-wrapper .stText {
+    color: #000000; /* Black color */
+}
