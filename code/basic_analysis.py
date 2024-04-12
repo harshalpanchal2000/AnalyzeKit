@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 from scipy.stats import skew
 
@@ -31,35 +32,29 @@ def display_dataset_info(df):
 def perform_basic_analysis(df):
     # Find missing values
     missing_values, missing_percentage = find_missing_values(df)
-    print("Missing Values:")
-    print(missing_values)
-    print("\nMissing Values Percentage:")
-    print(missing_percentage)
+    st.write("Missing Values:")
+    st.write(missing_values)
+    st.write("Missing Values Percentage:")
+    st.write(missing_percentage)
 
     # Calculate skewness
     skewness = calculate_skewness(df)
-    print("\nSkewness:")
-    print(skewness)
+    st.write("Skewness:")
+    st.write(skewness)
 
     # Find duplicate values
     duplicate_rows, duplicate_percentage = find_duplicate_values(df)
-    print("\nDuplicate Rows:")
-    print(duplicate_rows)
-    print("\nDuplicate Rows Percentage:")
-    print(duplicate_percentage)
+    st.write("Duplicate Rows:")
+    st.write(duplicate_rows)
+    st.write("Duplicate Rows Percentage:")
+    st.write(duplicate_percentage)
 
     # Calculate summary statistics
     summary_statistics = calculate_summary_statistics(df)
-    print("\nSummary Statistics:")
-    print(summary_statistics)
+    st.write("Summary Statistics:")
+    st.write(summary_statistics)
 
     # Display basic dataset information
     dataset_info = display_dataset_info(df)
-    print("\nDataset Information:")
-    print(dataset_info)
-
-if __name__ == "__main__":
-    # Example usage:
-    data_path = "your_data_path.csv"  # Provide the path to your dataset
-    df = pd.read_csv(data_path)
-    perform_basic_analysis(df)
+    st.write("Dataset Information:")
+    st.write(dataset_info)
