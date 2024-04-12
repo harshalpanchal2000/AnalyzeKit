@@ -13,7 +13,7 @@ def main():
     st.image("images/logo.png")
 
     # Additional image below the logo
-    st.image("images/additional_image.png")
+    st.image("images/Description.png")
 
     # File uploader
     st.sidebar.title("Upload Dataset")
