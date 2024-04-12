@@ -47,7 +47,7 @@ def main():
     st.markdown(
         """
         <div style='position: fixed; bottom: 10px; right: 10px;'>
-            <p>Built by <a href="https://www.linkedin.com/in/harshal-panchal/" target="_blank" style="color: yellow;">Harshal Panchal</a></p>
+            <p>Built by <a href="https://www.linkedin.com/in/harshal-panchal/" target="_blank" style="color: #fcdc5c;">Harshal Panchal</a></p>
         </div>
         """,
         unsafe_allow_html=True
