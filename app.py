@@ -22,9 +22,6 @@ def main():
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
 
-        # Hide additional image once the dataset is uploaded
-        additional_image.empty()
-
         # Create tabs for different analyses
         analysis_option = st.sidebar.radio("Choose Analysis", ["Basic Analysis", "Categorical Analysis", "Numerical Analysis"])
 
