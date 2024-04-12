@@ -13,14 +13,14 @@ def main():
     st.image("logo.png")
 
     # Description of the app
-    st.write(
-        "AnalyseKit is a tool designed to help users quickly and easily understand their dataset through automated exploratory data analysis (EDA). "
-        "Upload your CSV file and choose from different analysis options to gain insights into your data."
-    )
+    st.image("additional_image.png")
+
+    # Subheading
+    st.subheader("Understand Your Data Quickly and Easily")
 
     # File uploader
     st.sidebar.title("Upload Dataset")
-    uploaded_file = st.sidebar.file_uploader("", type=["csv"])
+    uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
