@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 from scipy.stats import skew
+import warnings
+
+# Suppress all warnings
+warnings.filterwarnings("ignore")
 
 # Function to find missing values and its percentage
 def find_missing_values(df):
