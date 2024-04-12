@@ -45,11 +45,11 @@ def main():
             else:
                 perform_numerical_analysis(df)
 
-    # Write "Made by Harshal Panchal" in the bottom corner
+    # Link to LinkedIn profile
     st.markdown(
         """
         <div style='position: fixed; bottom: 10px; right: 10px;'>
-            <p>Made by Harshal Panchal</p>
+            <p>Built by <a href="https://www.linkedin.com/in/harshal-panchal/" target="_blank">Harshal Panchal</a></p>
         </div>
         """,
         unsafe_allow_html=True
