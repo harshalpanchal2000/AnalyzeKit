@@ -88,8 +88,8 @@ def main():
         with st.beta_expander("Missing Values Analysis"):
             find_missing_values(df)
         
-        with st.beta_expander("Skewness Analysis"):
-            calculate_skewness(df)
+        #with st.beta_expander("Skewness Analysis"):
+            #calculate_skewness(df)
         
         with st.beta_expander("Duplicate Values Analysis"):
             find_duplicate_values(df)
