@@ -15,7 +15,7 @@ bg_image_path = "https://github.com/harshalpanchal2000/AnalyzeKit/tree/main/imag
 page_bg_img = f"""
 <style>
 [data-testid="stAppContainer"] {{
-    background-image: url({bg_image_path});
+    background-image: url(bg_image_path);
     background-size: cover;
 }}
 </style>
