@@ -49,4 +49,5 @@ def perform_numerical_analysis(df):
         visualize_data_distribution(df, column)
         visualize_feature_relationships(df, column, df.columns[-1])  # Assuming last column is the target variable
         visualize_pairwise_relationships(df)
-        visualize_correlation(df)
+    st.subheader("Correlation Heatmap:")
+    visualize_correlation(df)
