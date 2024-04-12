@@ -14,7 +14,7 @@ bg_image_path = "https://github.com/harshalpanchal2000/AnalyzeKit/tree/main/imag
 # Define the CSS style to set the background image
 page_bg_img = f"""
 <style>
-[data-testid="stAppContainer"] {{
+[data-testid="stAppViewContainer"] {{
     background-image: url(bg_image_path);
     background-size: cover;
 }}
