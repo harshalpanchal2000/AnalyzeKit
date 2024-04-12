@@ -9,31 +9,20 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def main():
-    # Logo image
-    st.sidebar.image("logo.png")
+    # Logo image in the main section
+    st.image("logo.png")
 
-    # Subheading
-    #st.subheader("Understand Your Data Quickly and Easily")
-
-    # Description of the app on the sidebar
-    st.sidebar.write(
+    # Description of the app
+    st.write(
         "AnalyseKit is a tool designed to help users quickly and easily understand their dataset through automated exploratory data analysis (EDA). "
         "Upload your CSV file and choose from different analysis options to gain insights into your data."
     )
 
-    # Set the background color of the sidebar to yellow
-    st.markdown(
-        """
-        <style>
-        .sidebar .sidebar-content {
-            background-color: #FFFF00;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+    # Subheading
+    st.subheader("Understand Your Data Quickly and Easily")
 
     # File uploader
+    st.sidebar.title("Upload Dataset")
     uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
 
     if uploaded_file is not None:
