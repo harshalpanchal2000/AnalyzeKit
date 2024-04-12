@@ -10,10 +10,10 @@ warnings.filterwarnings("ignore")
 
 def main():
     # Logo image in the main section
-    st.image("logo.png")
+    st.image("images/logo.png")
 
     # Description of the app
-    st.image("additional_image.png")
+    st.image("images/Description.png")
 
     # Subheading
     st.subheader("Understand Your Data Quickly and Easily")
