@@ -15,7 +15,7 @@ def main():
     # Additional image below the logo
     additional_image_path = "images/Description.png"
     if st.sidebar.file_uploader("Upload your CSV file", type=["csv"]) is not None:
-        additional_image = st.image(additional_image_path, width=200)
+        additional_image = st.image(additional_image_path)
     else:
         additional_image = st.empty()
 
