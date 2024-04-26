@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: node:20
+      options: --user=root  # Required to run Docker inside Docker
 
     steps:
       - name: Checkout repository
