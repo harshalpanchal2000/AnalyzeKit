@@ -8,6 +8,9 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    container:
+      image: node:20
+      options: --user=root  # Required to run Docker inside Docker
 
     steps:
       - name: Checkout repository
@@ -20,4 +23,4 @@ jobs:
         run: docker build -t your-image-name:latest .
 
       - name: Push Docker image
-        run: docker push your-image-name:latest
+        run: docker push analyzekit:latest
