@@ -1,6 +1,6 @@
 # AnalyzeKit: Because Life's Too Short for Mundane Analysis!
 
-AnalyseKit is a web application that provides automated exploratory data analysis (EDA) for CSV datasets. It allows users to quickly understand their dataset by visualizing key insights and statistical summaries.
+AnalyseKit is a web application that provides automated exploratory data analysis (EDA) for CSV datasets. It allows users to quickly understand their dataset by visualizing key insights and statistical summaries. 
 
 ## Features
 
